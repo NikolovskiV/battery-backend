@@ -25,6 +25,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
   origin: "https://battery-front.onrender.com",
+  headers: ["Content-Type"],
   credentials: true,
 })
 );
