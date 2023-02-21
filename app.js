@@ -52,7 +52,7 @@ app.use((err, req, res, next) => {
 // const __dirname = path.resolve();
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
-const port = process.env.PORT || 4000
+const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`The server is running on port ${port}`);
 });
