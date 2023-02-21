@@ -24,7 +24,7 @@ mongoose.connect(process.env.DATABASE_ACCESS, (error) => {
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: "https://battery-front.onrender.com/",
+  origin: "http://localhost:3000",
   credentials: true,
 })
 );
