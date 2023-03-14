@@ -23,12 +23,7 @@ mongoose.connect(process.env.DATABASE_ACCESS, (error) => {
 //Server connection
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({
-  origin: "*",
-  headers: ["Content-Type"],
-  credentials: true,
-})
-);
+app.use(cors());
 app.options('*', cors())
 
 //  USE TO UPLOAD BATTERY ON THE MongoDB
