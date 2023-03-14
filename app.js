@@ -23,8 +23,13 @@ mongoose.connect(process.env.DATABASE_ACCESS, (error) => {
 //Server connection
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
-// app.options('*', cors())
+app.use(cors({
+  origin: "https://battery-front.onrender.com",
+  headers: ["Content-Type"],
+  credentials: true,
+})
+);
+app.options('*', cors())
 
 //  USE TO UPLOAD BATTERY ON THE MongoDB
 // app.use('/api/seed', batteryRouter)
